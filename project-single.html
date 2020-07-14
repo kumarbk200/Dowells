@@ -40,7 +40,13 @@
 
 </head>
 
-<body>
+<body onload="loaderFunction()">
+    <div id="loading" style="position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #fff
+	url('https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif') no-repeat center center;	
+	z-index: 11111111111111111;"></div>
 	<a href="https://polycab.com" target="_blank" class="float">
 		<img src="img/pol.png" >
 		</a>
@@ -67,7 +73,7 @@
         <!-- TOP BAR -->
         <div class="glax_tm_topbar_wrap">
             <div class="container">
-                <div class="inner_wrap">
+                <div class="inner_wrap wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
                     <div class="left_part_wrap">
                         <div class="share_wrap">
                             <ul>
@@ -108,7 +114,7 @@
             <!-- navbar -->
             <div class="glax_tm_header_wrap" data-style="transparent" data-position="absolute">
                 <div class="container">
-                    <div class="header_inner_wrap">
+                    <div class="header_inner_wrap wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
                         <div class="menu_wrap">
                             <ul>
                                 <li><a href="index.html">Home</a></li>
@@ -255,17 +261,11 @@
                                     <img src="img/contact/1.jpg" alt="" />
                                 </div>
                                 <div class="definitions_wrap">
-<<<<<<< HEAD:dowells/project-single.html
                                     <h3>Head office address:</h3>
                                      
                                          
                                      
-=======
-
-
-                                    <h3>Address:</h3>
->>>>>>> 7b73c52ef94e1a494c0d2d49cc6843a6f6492ddf:project-single.html
-                                    <p>Polycab-Dowell’s<br> Unit-7, Village-vaseti, Taluka-Halol, District- Panchmahal</p>
+                                    <p>Manufacturing Plant Address</p>
                                     <p>Phone: +91 0265-415-7234</p>
                                     <p><span>Email:</span><a href="#">joshi.vasant@polycab.com</a><br>
                                         <a href="#">Himanshu.Bagla@Polycab.com</a></p>
@@ -365,17 +365,11 @@
                                     <img src="img/contact/1.jpg" alt="" />
                                 </div>
                                 <div class="definitions_wrap">
-<<<<<<< HEAD:dowells/project-single.html
                                     <h3>Head office address:</h3>
                                      
                                          
                                      
-=======
-
-
-                                    <h3>Address:</h3>
->>>>>>> 7b73c52ef94e1a494c0d2d49cc6843a6f6492ddf:project-single.html
-                                    <p>Polycab-Dowell’s<br> Unit-7, Village-vaseti, Taluka-Halol, District- Panchmahal</p>
+                                    <p>Manufacturing Plant Address</p>
                                     <p>Phone: +91 0265-415-7234</p>
                                     <p><span>Email:</span><a href="#">joshi.vasant@polycab.com</a><br>
                                         <a href="#">Himanshu.Bagla@Polycab.com</a></p>
@@ -557,7 +551,7 @@
 
                         <div class="glax_tm_footer_wrap">
                             <div class="container">
-                                <div class="glax_tm_list_wrap footer" data-column="3" data-space="40">
+                                <div class="glax_tm_list_wrap footer wow fadeInUp" data-column="3" data-space="40" style="visibility: visible; animation-name: fadeInUp;">
                                     <ul class="glax_list">
                                         <li>
                                             <div class="inner">
@@ -576,7 +570,7 @@
                                                     <h3> Head office address:</h3>
                                                 </div>
                                                 <div class="definition">
-                                                    <p>Polycab-Dowell’s<br> Unit-7, Village-vaseti, Taluka-Halol, District- Panchmahal</p>
+                                                    <p>Manufacturing Plant Address</p>
                                                 </div>
                                             </div>
                                         </li>
@@ -605,7 +599,7 @@
                     </div>
                 </div>
                 <div class="bottom_wrap">
-                    <div class="container">
+                    <div class="container wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                         <div class="links_wrap">
                             <ul>
                                 <li><a href="service.html">Services</a></li>
@@ -632,14 +626,26 @@
 
     <!-- SCRIPTS -->
     <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+                    $('div#loading').removeAttr('id');
+            });
+            var preloader = document.getElementById("loading");
+            window.addEventListener('load', function(){
+                preloader.style.display = 'none';
+                })
+    
+        </script>
     <script src="js/plugins.js"></script>
     <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
     <script src="js/init.js"></script>
     <!-- /SCRIPTS -->
     <script src="dist/wow.min.js"></script>
     <script>
-        new WOW().init();
-    </script>
+         $(document).ready(function(){
+            new WOW().init();  
+            });
+        </script>
 <script type="text/javascript">
     var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
